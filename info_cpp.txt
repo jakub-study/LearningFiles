@@ -1,0 +1,71 @@
+1. Manipulator std::endl - str. 57
+
+2. Zasady nazywania zmiennych - str. 80
+
+3. Ograniczenia typow calkowitoliczbowych - str. 82
+
+4. Ograniczenia typow zmiennoprzecinkowych - str. 103
+
+5. Dokladnosc typow zmiennoprzecinkowych: 
+   - float: 6-7 cyfr znaczacych
+   - double: 15-16 cyfr znaczacych
+   - long double: 19-20 cyfr znaczacych
+   
+6. Podczas wykonywania danego wyrazenia kompilator automatycznie dokonuje konwersji wszelkich typow calkowitoliczbowych na typ int (jesli tylko typ int jest w stanie calkowicie pomiescic wartosci
+   danego typu) np. majac trzy zmienne typu short: one, two, three oraz instrukcje "three = one + two;" kompilator najpierw dokonuje konwersji zmiennych one oraz two na typ int, wykonuje obliczenia
+   na tym typie, a na koncu konwertuje wynik z powrotem na typ short. Podczas operacji na danych typu calkowitoliczbowego >= od typu int nastepuje automatyczna konwersja na typ o porzadku wyzszym, by
+   nie dopuscic do utraty danych. Identycznie jest w przypadku operacji na liczbach zmiennoprzecinkowych, gdzie typ o porzadku nizszym konwertowany jest na typ o porzadku wyzszym. W przypadku operacji
+   na danych roznych typow, zawsze dokonuje sie konwersja liczb na typ zmiennoprzecinkowy (o ile ten jest w stanie pomiescic wszystkie wartosci typu calkowitoliczbowego).
+   
+7. Za pomoca inicjalizacji klamrowej mozna zainicjalizowac zerem wszystkie elementy tablicy np. "int tab[3] {};" lub "float tab[45] = {};".
+
+8. Pole bitowe - str. 149
+
+9. Unia - str.149-150
+
+10. Typ wyliczeniowy:
+    - deklaracja: "enum spectrum {czerwony, pomaranczowy, zielony, niebieski, fioletowy = 50, zolty, rozowy};"
+    - oznaczenia: 
+      * spectrum - typ wyliczeniowy
+      * czerwony, pomaranczowy, zielony ... - enumatory
+    - wartosci: czerwony = 0, pomaranczowy = 1, zolty = 51, rozowy = 52
+    - deklaracja zmiennej: "spectrum pasmo = niebieski;"
+    - mozliwosc konwersji typu wyliczeniowego na typ calkowity int:
+      * "int kolor = zielony;" -> wtedy kolor = 3
+      * "int kolor = 3 + czerwony;" -> wtedy kolor = 3 + 1 = 4
+    - brak mozliwosci konwersji typu calkowitego na wyliczeniowy bez jawnego rzutowania typu:
+      * "spectrum pasmo = 3;" -> zle
+      * "spectrum pasmo = 3 + czerwony;" -> zle (czerwony konwertowany na int)
+      * "spectrum pasmo = spectrum(3);" -> dobrze (pasmo = niebieski)
+    - dla typu wyliczeniowego zdefiniowany jest jedynie operator przypisania, wiec:
+      * "spectrum pasmo = czerwony + zielony;" -> zle (czerwony i zielony sa konwertowane na typ int, wykonywania jest dodawanie, wynik jest typu int, wiec nie moze zostac automatycznie
+                                                       skonwertowany na zmienna typu wyliczeniowego)
+      * "spectrum pasmo = czerwony; ++czerwony;" -> zle (czerwony konwertowany na int, wykonywana operacja preinkrementacji, jednak wyniku nie mozna przypisac zmiennej typu wyliczeniowego)
+    - zakresy wartosci w typach wyliczeniowych: nie jest zabroniona operacja np. "pasmo = spectrum(45);", o ile wartosc 45 miesci sie w zakresie wartosci typu wyliczeniowego (omowienie sposobu
+      obliczania zakresu wartosci w typach wyliczeniowych na str. 153)
+
+11. Zasady uzywania operatorow new/new[] oraz delete/delete[] - str. 163
+
+12. Tablice i wskazniki:
+    - deklaracja: "int tab[5] = {0,1,2,3,4};"
+    - nazwa tablicy jest adresem jej pierwszego elementu: tab = &tab[0] -> *tab = tab[0]
+    - odnoszenie sie do poszczegolnych elementow tablicy: tab[1] = *(tab+1), tab[3] = *(tab+3)
+    - deklaracja wskaznika na tablice: "int * wsk = tab;":
+      * wsk[0] = tab[0], wsk[1] = tab[1] ...
+      * "wsk = wsk + 2;" -> dobrze -> zwiekszenie wskaznika o wielkosc rowna dwukrotnej wielkosci jednego elementu tablicy (dla typu int zazwyczaj 2 razy 4 bajty = 8 bajtow) -> wsk[0] = tab[2] = 2 ...
+      * "tab = tab + 1;" ->  zle -> nazwa tablicy jest stala
+
+13. Klasa szablonowa std::vector - odpowiednik szablonowy dla tablicy stworzonej przez uzytkownika i przydzielanej w sposob dynamiczny (sterta), czyli w czasie wykonywania programu (w zwiazku z tym
+                                   taka tablica mimo umieszczenia jej deklaracji w kodzie moze nie powstac, jesli program "ominie" elementy kodu, w ktorym jest zadeklarowana i wykorzystywana, rowniez
+                                   rozmiar takiej tablicy moze byc dowolnie zmieniany w czasie trwania programu)
+                                   
+14. Klasa szablonowa std::array - odpowiednik szablonowy dla tablicy stworzonej przez uzytkownika i przydzielanej w sposob statyczny/staly (stos lub pamiec statyczna), juz podczas etapu kompilacji
+                                  programu (w zwiazku z tym taka tablica istnieje od samego poczatku wykonywania programu, niezaleznie od tego czy jest wykorzystywana czy nie, jej rozmiar jest
+                                  staly i nie moze byc zmieniany w czasie trwania programu)
+                                  
+15. Inkrementacja zmiennych: dla typow wbudowanych dzialanie formy przyrostkowej jak i przedrostkowej jest w zasadzie nierozroznialne w dzialaniu. Roznica moze byc widoczna dopiero w przypadku
+    tworzenia operatorow inkrementacji dla typow wlasnych uzytkownika takich jak struktury lub klasy:
+    - forma przedrostkowa jest wydajniejsza (zwiekszenie wartosci i nastepnie jej zwrocenie)
+    - forma przyrostkowa jest mniej wydajna (stworzenie kopii wartosci, nastepnie zwiekszenie wartosci i na koncu zwrocenie kopii)
+    
+16. 
