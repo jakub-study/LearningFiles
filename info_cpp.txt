@@ -27,7 +27,7 @@
     - deklaracja: "enum spectrum {czerwony, pomaranczowy, zielony, niebieski, fioletowy = 50, zolty, rozowy};"
     - oznaczenia: 
       * spectrum - typ wyliczeniowy
-      * czerwony, pomaranczowy, zielony ... - enumatory
+      * czerwony, pomaranczowy, zielony ... - enumerator
     - wartosci: czerwony = 0, pomaranczowy = 1, zolty = 51, rozowy = 52
     - deklaracja zmiennej: "spectrum pasmo = niebieski;"
     - mozliwosc konwersji typu wyliczeniowego na typ calkowity int:
@@ -68,4 +68,51 @@
     - forma przedrostkowa jest wydajniejsza (zwiekszenie wartosci i nastepnie jej zwrocenie)
     - forma przyrostkowa jest mniej wydajna (stworzenie kopii wartosci, nastepnie zwiekszenie wartosci i na koncu zwrocenie kopii)
     
-16. 
+16. Pętle nieskonczone:
+    - "while(true)" -> w nawiasach musi byc podane stale prawdziwe wyrazenie
+    - "for(;;)" -> brak warunku w petli for jest traktowany jako stale prawdziwe wyrazenie
+    
+17. Pętla opóźnienia - str. 218
+
+18. Aliasy typów "typedef":
+    - deklaracja: "typedef NazwaTypu NazwaAliasu" np. "typedef long double ld;", "typedef int * wsk_na_int;"
+    - użycie: "wsk_na_int one, two;" -> tworzy dwie zmienne typu int*
+    - tworzenie aliasu typu za pomoca slowka kluczowego typedef nie tworzy nowego typu, a jedynie nowa nazwe dla typu istniejacego, wiec np. wyrazenie 'ld' bedzie traktowane przez kompilator
+      jako zwykle wystapienie slowka long double
+      
+19. Pętla zakresowa:
+    - deklaracja prostej wbudowanej tablicy: "int tab[5] = {1, 2, 3, 4, 5};"
+    - stworzenie pętli zakresowej sluzacej do odczytu danych z tablicy: "for(int x: tab) {std::cout << x << std::endl;} -> 'x' reprezentuje kolejne elementy tablicy, wiec na poczatku x = tab[0],
+      pozniej x = tab[1] itd, w tym przypadku nie mozna zmieniac w zaden sposob elemntow tablicy
+    - stworzenie pętli zakresowej sluzacej do modyfikacji danych z tablicy: "for(int &x: tab) {x += 10;} -> poszczegolne wartosci tablicy zwiekszane o 10
+    
+20. Punkt odniesienia - operator, dla ktorego kazda wartosc wyrazenia po jego lewej stronie jest interpretowana przed przejsciem do wyrazenia po jego prawej strony. Do punktow odniesienia zaliczamy:
+    - operator średnik ';'
+    - operator przecinek ','
+    - logiczny operator alternatywy '||'
+    - logiczny operator koniunkcji '&&'
+    Przykład dzialania: "i++ < 6 || i == j; " -> wynikiem wyrazenia dla np. i = 9 oraz j = 10 jest wartosc true, poniewaz najpierw nastepuje porownanie '9 < 6', ktore daje wartosc false, nastepnie
+    w zwiazku z faktem ze operator '||' jest punktem odniesienia nastepuje postinkrementacja zmiennej 'i', wiec w porownaniu 'i = j' obie zmienne maja wartosc 10, a calosc wyrazenia daje wartosc true
+    
+21. Standard języka gwarantuje, że wyrażenia logiczne będą interpretowane od lewej strony do prawej strony i że ich interpretacja zostanie przerwana gdy znany będzie już wynik całego wyrażenia
+    logicznego np. "x != 0 && 100 / x > 1" -> w przypadku gdy 'x = 0' wyrazenie '100 / x > 1' nie zostanie wykonane, gdyz niezaleznie od jego wyniku wartosc calego wyrazenia logicznego wynosi false
+    
+22. Operator wyboru '?:':
+    - postać: "wyrazenie1 ? wyrazenie2 : wyrazenie3"
+    - jesli 'wyrazenie1 = true' -> wykonywanie 'wyrazenie2', jesli 'wyrazenie1 = false' -> wykonywanie 'wyrazenie3'
+    - przyklad: "int a = 9, b = 11; int c = a < b ? a : b;" -> nastapi inicjalizacja zmiennej 'c' wartosci zmiennej 'a = 9'
+    
+23. Instrukcja switch - wyrazenie interpretowane w instrukcji switch musi dac sie sprowadzic do wartosci calkowitej (czyli np. char, int, enumerator). Różnica między switch a if else: w przypadku
+    dwóch opcji warunkowych (coś lub coś) należy korzystać z instrukcji if else, jednak w przypadku trzech lub więcej opcji warunkowych instrukcja switch jest wydajniejsza
+
+
+
+
+
+
+
+
+
+
+
+
