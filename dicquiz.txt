@@ -1,36 +1,80 @@
+alliance-przymierze, sojusz
+ally-sprzymierzeniec, sojusznik
+almost-prawie, nieomal, o malo co
 amendment-poprawka, nowelizacja, zmiana, poprawa
+ancestor-przodek
+approach-zblizac sie, podchodzic (do kogos lub czegos)
+assess-oceniac, poddawac ocenie, oszacowywac
+attorney-prawnik, mecenas
 back down-ustapic, dac za wygrana
+barely-ledwie, ledwo, prawie wcale
+be atrracted to sb-czuc pociag do kogos
 be fond of sb-lubic kogos, czuc do kogos sympatie
 be fond of sth-bardzo cos lubic
 be on duty-byc na sluzbie/odbywac sluzbe (pracowac)
+be out of line-byc nie do przyjecia, byc nie na miejscu, zachowywac sie nieodpowiednio
 beg-prosic, blagac, zebrac
+bend-schylac, zginac, wyginac (np sie)
+cease-przerwac, przestac, zaprzestac, zaniechac
 charm-czar, urok, wdziek (np osobisty)
 charming-czarujacy, uroczy
+childish-dziecinny, dzieciecy
+consider-rozpatrzyc, rozpatrywac, brac pod uwage
 contribute to sth-przylozyc sie do czegos, przyczyniac sie do czegos, miec w cos wklad
 convince-przekonac, namowic
 convince sb-przekonac kogos
 courage-odwaga
+courtroom-sala sadowa, sala rozpraw
+cozy-przytulny, wygodny, komfortowy
+dare-odwazyc sie, osmielic sie, miec czelnosc
 decaf-kawa bezkofeinowa, bezkofeinowy
 direct-bezposredni, otwarty (o osobie)
 entirely-calkowicie, zupelnie
+errand boy-chlopiec na posylki
+feel for sb-wspolczuc komus
+force sb-zmuszac (kogos)
+force sth-wymuszac (cos np zmiane)
+gauche-niegrzeczny, nietaktowny
 given name (first name)-imie
 grudge-niechec, uraza
-hang up-rozlaczyc sie, odlozyc sluchawke (podczas rozmowy telefonicznej)
+hang up (on sb)-rozlaczyc sie, odlozyc sluchawke (podczas rozmowy telefonicznej)
 hesitation-niepewnosc, zawahanie, niezdecydowanie
+identities-dane osobowe
 inconclusive-niedecydujacy, nierozstrzygajacy, niejednoznaczny
 insane-oblakany, szalony, niepoczytalny
 insist-nalegac, domagac sie
+insult (noun)-zniewga, obelga, obraza
+insult (verb)-zniewazac, obrazac
 intimate-intymny, prywatny, zazyly, bliski
+intimidate-wzbudzac strach/groze, oniesmielac
+irreversible-nieodwolywalny, nieodwracalny, nieuleczalny
+let sb down-zawiesc kogos, przyniesc komus zawod
+likewise-nawzajem, mnie rowniez
+meantime-tymczasem, w miedzyczasie
+melt-roztapiac, topic sie
+mislead-zmylic, wprowadzic w blad
 notify-powiadomic, zawiadamiac, zglaszac (np na policje)
+obedience-posluszenstwo
+occur to sb-przyjsc komus do glowy
+oversee-nadzorowac
+oversight-niedopatrzenie
 overwhelming-przygniatajacy, przytlaczajacy (np uczucie)
+plea-usprawiedliwienie, pretekst, wytlumaczenie
 proof-dowod (np na cos ze ktos cos zrobil)
+proposal-propozycja, oferta, oswiadczyny
 rape-gwalt, zgwalcic
 reckless-nieostrozny, nierozwazny, lekkomyslny (na zagrozenie, bezpieczenstwo)
+regard-szacunek (do kogos), powazanie
 ruthless-bezlitosny, bezwzgledny
+shameless-bezczelny, bezwstydny
 spotlight-centrum uwagi, rozglos
+stare-wpatrywac sie, gapic sie
 start over-zaczynac na nowo/od nowa
+submit-skladac (np rezygnacje), dostarczac (np dokumenty)
 terminate pregnancy-przerwac ciaze
 threat-pogrozka, grozba, zagrozenie
+threaten-grozic, straszyc
 thrilling-ekscytujacy, emocjonujacy
 time will tell-to sie okaze, czas pokaze
+tribe-szczep, plemie
 whip-deputowany odpowiedzialny za dyscypline partyjna

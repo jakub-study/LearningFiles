@@ -105,8 +105,46 @@
 23. Instrukcja switch - wyrazenie interpretowane w instrukcji switch musi dac sie sprowadzic do wartosci calkowitej (czyli np. char, int, enumerator). Różnica między switch a if else: w przypadku
     dwóch opcji warunkowych (coś lub coś) należy korzystać z instrukcji if else, jednak w przypadku trzech lub więcej opcji warunkowych instrukcja switch jest wydajniejsza
 
+24. Ograniczenie typow wartosci zwracanych z funkcji - mozna zwracac wszystkie typy danych poczawszy od pojedynczych typow wbudowanych (np int), az po struktury i obiekty klas, za wyjatkiem tablic
+    wlasnych stworzonych przez uzytkownika (jednak mozna zwrocic obiekt klasy zawierajacy tablice). Rozwiązaniem w przypadku zwracania tablic jest zwrócenie adresu na pierwszy element danej tablicy.
+    
+25. Prototypowanie - wykorzystywane jest na etapie kompilacji programu, stad rownoznaczne jest ze statyczna kontrola typow. Prototypowanie chroni przed błędami zwiazanymi m.in. z nieprawidlowa
+    liczba parametrow i nieprawidlowym typem parametru badz wartosci zwracanej (w szczegolnosci dzieki prototypowaniu kompilator jest w stanie przeprowadzic automatyczna konwersje danego typu na 
+    typ okreslony jako typ wartosci parametru lub wartosci zwracanej).
+    
+26. Nazewnictwo w funkcjach:
+    - parametr (inaczej parametr formalny) - zmienna używana do odbioru przekazanej wartosci w funkcji
+    - argument (inaczej parametr faktyczny) - zmienna używana do przekazania wartosci do funkcji
 
+27. Przekazywanie tablic jednowymiarowych do funkcji: "void funkcja(int tab[]);" = "void funkcja(int * tab);" -> gdzie tab to wskaznik na pierwszy element przekazywanej tablicy
 
+28. Wskazniki i modifikator "const":
+    - "const int * ps;" -> ps jest wskaznikiem na stala int -> nie mozna zmieniac wartosci danej wskazywanej przez ps (stale '*ps'), ale mozna zmieniac to na co wskazuje ps (niestale 'ps')
+    - "int * const ps;" -> ps jest stalym wskaznikiem na int -> mozna zmieniac wartosc danej wskazywanej przez ps (niestale '*ps'), ale nie mozna zmieniac tego na co wskazuje ps (stale 'ps')
+    
+29. Przekazywanie tablic dwuwymiarowych do funkcji (przypadek dla tablicy zadeklarownej jako "int tab[3][5];"):
+    - 'tab' to wskaznik na pierwszy element tablicy, czyli na tablice piecu wartosci typu int
+    - "void funkcja(int (*tab)[5]);" -> tab jest wskaznikiem piecioelementowych tablic typu int
+    - "void funkcja(int tab[][5]);" -> prostszy rownoznaczny zapis
+    - "void funkcja(const int tab[][5]);" lub "void funkcja(const int (*tab)[5]);" -> niepoprawne - nie mozna deklarowac jako const wskaznikow na wskazniki
+    - ogolnie dla tablic dwuwymiarowych zachodzi rownosc: 'tab[x][y] = *(*(tab+x)+y)'
+    
+30. Rekurencja - zakladamy, że istnieje pewna funkcja rekurencyjna w postaci:
+    void rekurencja()
+    {
+        instrukcje1;
+        if(warunek)
+            rekurencja();
+        instrukcje2;
+    }
+    Zależności:
+    - cykl 1: dopóki 'warunek' jest równy wartości 'true' -> ciągle wykonywanie wyrażenia 'instrukcje1' oraz kolejne rekurencyjne wywoływania funkcji 'rekurencja'
+    - cykl 2: w momencie gdy 'warunek' jest rowny wartosci 'false' -> pominiecie kolejnego rekurencyjnego wywolania funkcji 'rekurencja', przejscie do wyrazenia 'instrukcje2', a nastepnie powrot do
+      poprzedniego wywołania funkcji 'rekurencja' -> cykl 2 powtórzy się tyle samo razy, ile razy został wykonany cykl 1
+    - przykład: jeśli funkcja 'rekurencja' jest wywoływana rekurencyjnie pięciokrotnie, to wtedy najpierw pięć razy z rzędu zostanie wykonane wyrażenie 'instrukcje1', a następnie pięc razy z rzędu
+      zostanie wykonane wyrażenie 'instrukcje2'
+      
+31. 
 
 
 
