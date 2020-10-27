@@ -144,8 +144,69 @@
     - przykład: jeśli funkcja 'rekurencja' jest wywoływana rekurencyjnie pięciokrotnie, to wtedy najpierw pięć razy z rzędu zostanie wykonane wyrażenie 'instrukcje1', a następnie pięc razy z rzędu
       zostanie wykonane wyrażenie 'instrukcje2'
       
-31. 
+31. Wskaźniki na funkcje:
+    - adres funkcji jest utozsamiany z jej nazwa, zatem jesli istnieje funkcja "int function();" to jej adres to 'function'
+    - różnica między wywołaniem funkcji, a przekazywaniem jej adresu:
+      * wyrażenie "function2(function());" powoduje przekazanie funkcji 'function2()' wartosci zwracanej z wywolania funkcji 'function()'
+      * wyrażenie "function2(function);" powoduje przekazanie funkcji 'function2()' adresu funkcji 'function()'
+    - deklaracja wskaznika na funkcje i jego użycie:
+      * istnieje pewna funkcja o prototypie "int function(double);"
+      * wskaznik na funkcje tworzy się poprzez zastąpienie nazwy funkcji wyrażeniem w postaci '(*wskaznik)'
+      * wskaznik na zadaną funkcje wygląda następujaco: "int (*wsk)(double);"
+      * można teraz tworzyć wyrażenia w postaci "wsk = function;" -> gdzie wsk wskazuje funkcję 'function()'
+      * wywołanie funkcji może nastąpić poprzez jedno z poniższych trzech równoznacznych wyrażeń:
+        - "function(5);" -> zwykle wywolanie funkcji
+        - "(*wsk)(5);" -> wywołanie funkcji poprzez wskaźnik na funkcję -> wersja jednoznacznie sugerująca, że 'wsk' to wskaźnik na funkcję
+        - "wsk(5);" -> wywołanie funkcji poprzez wskaźnik na funkcję -> wersja uproszczona
+        
+32. Rodzaje referencji:
+    - referencja do 'l-wartości' (pojedynczy znak '&'):
+      * definicja 'l-wartości' -> są to takie obiekty danych, do których można się odwołać np. zwykłe zmienne, elementy tablicy, pola struktury, referencja, wskaźnik itd. 
+      * istnieją dwa typy 'l-wartości':
+        - 'l-wartość modyfikowalna' -> obiekt danych, do którego da się odwołać i nie jest on zadeklarowany ze słowem kluczowym 'const'
+        - 'l-wartość niemodyfikowalna' -> obiekt danych, do którego da się odwołać i jest on zadeklarowany ze słowem kluczowym 'const'
+    - referencja do 'r-wartości' (podwójny znak '&&'):
+      * definicja 'r-wartości' -> przeciwieństwo 'l-wartości', takie obiekty danych, do których nie można się odwołać
+      * przykłady referencji do 'r-wartości':
+        - "double && rref = std::sqrt(36.0);"
+        - "double && rref = 2.0 + 5.0 + 3.2 + x;" -> gdzie "double x = 5.9;"
+        - "int && rref = a + b;" -> gdzie "int a = 5, b = 10;" 
 
+33. Tworzenie zmiennych tymczasowych a parametry referencyjne:
+    - język C++ wygeneruje zmienną tymczasową, jeśli argument podany do funkcji nie pasuje do jej parametru, jedynie w przypadku parametru zadeklarowanego jako stała referencja (przypadek dla
+      niestalej referencji utożsamiany jest z chęcia zmiany wartości orginalnej zmiennej, co dla zmiennych tymczasowych powodowałoby chęc zmiany wartosci zmiennej tymczasowej - nie powodowaloby
+      to jakichkolwiek zmian w programie, dlatego taka operacja nie została umożliwiona)
+    - zmienna tymczasowa tworzona jest w dwóch przypadkach:
+      * jeśli argument podawany do funkcji ma prawidłowy typ, ale nie jest 'l-wartością'
+      * jeśli argument podawany do funkcji ma niewłaściwy typ, ale może być on skonwertowany na typ właściwy
+    - przykłady utworzenia zmiennych tymczasowych (dla funkcji "void function(const & double a);"):
+      * "function(7.0);"
+      * "function(x + 3.5);" dla "double x = 4.0;"
+      * "function(x);" dla "int x = 4;"    
+
+33. Przeciążanie funkcji:
+    - w celu dokonania przeciązenia funkcji należy zadeklarować co najmniej dwie funkcje ze zmienioną sygnaturą (sygnatura funkcji = lista parametrów funkcji)
+    - funkcje z tą samą sygnaturą, ale innymi typami wartości zwracanej są traktowane przez kompilator jako błąd - nie jest to przeciążenie funkcji
+    - kompilator sprawdzając sygnatury funkcji traktuje w sposób równoważny dany typ oraz refrencję modyfikowalna do tego typu
+    - kompilator sprawdzając sygnatury funkcji zazwyczaj rozróżnia parametry niemodyfikowalne 'const' oraz modyfikowalne 'nie-const' (wyjątek to np. "void function(const double a);" oraz
+      "void function(double a);" -> nie jest to przykład przeciążenia funkcji, kompilator na podstawie wywołania "function(x);" dla "double x = 2.5;" nie jest w stanie stwierdzić, z której funkcji
+      należy skorzystać
+    - przykłady powyższych założeń:
+      * funkcje: "double function(int a, double b);" oraz "double function(int a, int b);" są przykładem przeciążenia funkcji
+      * funkcje: "double function(int a, double b);" oraz "int function(int a, double b);" nie są przykładem przeciążenia funkcji
+      * funkcje: "void function(double a);" oraz "void function(double & a);" nie są przykładem przeciążenia funkcji
+      * funkcje: "void function(const double & a);" oraz "void function(double & a);" są przykładem przeciążenia funkcji
+      
+34. 
+      
+    
+    
+    
+    
+    
+    
+    
+ 
 
 
 

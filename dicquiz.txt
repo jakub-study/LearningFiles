@@ -1,3 +1,5 @@
+affair-wydarzenie, sprawa, afera
+affair (love affair)-romans
 alliance-przymierze, sojusz
 ally-sprzymierzeniec, sojusznik
 almost-prawie, nieomal, o malo co
@@ -28,6 +30,7 @@ courtroom-sala sadowa, sala rozpraw
 cozy-przytulny, wygodny, komfortowy
 dare-odwazyc sie, osmielic sie, miec czelnosc
 decaf-kawa bezkofeinowa, bezkofeinowy
+demeaning-ponizajace
 direct-bezposredni, otwarty (o osobie)
 entirely-calkowicie, zupelnie
 errand boy-chlopiec na posylki
@@ -35,10 +38,14 @@ feel for sb-wspolczuc komus
 force sb-zmuszac (kogos)
 force sth-wymuszac (cos np zmiane)
 gauche-niegrzeczny, nietaktowny
+get rid of sb-pozbyc sie kogos, przegonic kogos
+get rid of sth-pozbyc sie czegos
 given name (first name)-imie
 grudge-niechec, uraza
 hang up (on sb)-rozlaczyc sie, odlozyc sluchawke (podczas rozmowy telefonicznej)
 hesitation-niepewnosc, zawahanie, niezdecydowanie
+hopefully-miejmy nadzieje
+i doubt it-watpie w to
 identities-dane osobowe
 inconclusive-niedecydujacy, nierozstrzygajacy, niejednoznaczny
 insane-oblakany, szalony, niepoczytalny
@@ -50,16 +57,20 @@ intimidate-wzbudzac strach/groze, oniesmielac
 irreversible-nieodwolywalny, nieodwracalny, nieuleczalny
 let sb down-zawiesc kogos, przyniesc komus zawod
 likewise-nawzajem, mnie rowniez
+loathe-brzydzic sie, czuc wstret
 meantime-tymczasem, w miedzyczasie
 melt-roztapiac, topic sie
 mislead-zmylic, wprowadzic w blad
+needle-igla
 notify-powiadomic, zawiadamiac, zglaszac (np na policje)
 obedience-posluszenstwo
 occur to sb-przyjsc komus do glowy
 oversee-nadzorowac
 oversight-niedopatrzenie
 overwhelming-przygniatajacy, przytlaczajacy (np uczucie)
+pawn-pionek (figura szachowa/osoba wykorzystywana przez innych)
 plea-usprawiedliwienie, pretekst, wytlumaczenie
+plenty (plenty of sth)-mnostwo, duzo, wiele (mnostwo czegos)
 proof-dowod (np na cos ze ktos cos zrobil)
 proposal-propozycja, oferta, oswiadczyny
 rape-gwalt, zgwalcic
@@ -72,9 +83,8 @@ stare-wpatrywac sie, gapic sie
 start over-zaczynac na nowo/od nowa
 submit-skladac (np rezygnacje), dostarczac (np dokumenty)
 terminate pregnancy-przerwac ciaze
+the day after tomorrow-pojutrze
 threat-pogrozka, grozba, zagrozenie
 threaten-grozic, straszyc
-thrilling-ekscytujacy, emocjonujacy
-time will tell-to sie okaze, czas pokaze
 tribe-szczep, plemie
 whip-deputowany odpowiedzialny za dyscypline partyjna
