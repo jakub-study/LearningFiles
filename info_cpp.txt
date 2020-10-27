@@ -185,7 +185,7 @@
       * "function(x);" dla "int x = 4;"    
 
 33. Przeciążanie funkcji:
-    - w celu dokonania przeciązenia funkcji należy zadeklarować co najmniej dwie funkcje ze zmienioną sygnaturą (sygnatura funkcji = lista parametrów funkcji)
+    - w celu dokonania przeciążenia funkcji należy zadeklarować co najmniej dwie funkcje ze zmienioną sygnaturą (sygnatura funkcji = lista parametrów funkcji)
     - funkcje z tą samą sygnaturą, ale innymi typami wartości zwracanej są traktowane przez kompilator jako błąd - nie jest to przeciążenie funkcji
     - kompilator sprawdzając sygnatury funkcji traktuje w sposób równoważny dany typ oraz refrencję modyfikowalna do tego typu
     - kompilator sprawdzając sygnatury funkcji zazwyczaj rozróżnia parametry niemodyfikowalne 'const' oraz modyfikowalne 'nie-const' (wyjątek to np. "void function(const double a);" oraz
