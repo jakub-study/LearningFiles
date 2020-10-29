@@ -197,14 +197,94 @@
       * funkcje: "void function(double a);" oraz "void function(double & a);" nie są przykładem przeciążenia funkcji
       * funkcje: "void function(const double & a);" oraz "void function(double & a);" są przykładem przeciążenia funkcji
       
-34. 
-      
+34. Szablony funkcji:
+    - stworzenie szablonu funkcji:
+      template <typename T>
+      T function(T a, T b)
+      {
+          return a + b;
+      }
+    - samo utworzenie szablonu funkcji nie powoduje wygenerowania na jego podstawie żadnych definicji funkcji - tworzone są one dopiero w wyniku konkretyzacji (jawnej lub niejawnej) lub
+      jawnej specjalizacji szablonu funkcji
+    - dopasowanie funkcji - jawna specjalizacja funkcji przekrywa zwykły szablon, natomiast zwykła nieszablonowa funkcja przekrywa zarówno zwykłe funkcje szablonowe jak i ich jawne specjalizacje
+    - konkretyzacja niejawna - kompilator na podstawie typów podanych argumentów samodzielnie decyduje o wygenerowaniu na podstawie dostępnego szablonu danej definicji funkcji np.
+      int main()
+      {
+          int a = 4, b = 5;
+          ...
+          int c = function(a,b); // niejawna konkretyzacja - kompilator dopiero w tym momencie tworzy potrzebną definicję funkcji "int function(int, int);"
+          ...
+      }
+    - konkretyzacja jawna - wymuszenie na kompilatorze wygenerowania na podstawie dostępnego szablonu danej definicji funkcji np.
+      int main()
+      {
+    	  ...
+          template double function<double>(double, double); // jawna konkretyzacja - kompliator tworzy definicje funkcji "double function(double, double);" nawet jeśli nie zostanie ona użyta w kodzie
+          ...
+          double a;
+          int b;
+          int c = function<int>(a,b); // jawna konkretyzacja - kompilator tworzy definicje funkcji "int function(int, int);" w wyniku czego następuje konwersja 'int(a)'
+          ...
+      }
+    - jawna specjalizacja - kompilator nie używa dostępnego szablonu do wygenerowania definicji funkcji dla danego typu danych, lecz używa odrębnej, wyspecjalizowanej definicji funkcji, która
+      została jawnie zdefiniowana dla danego typu danych np.
+      template <> float function(float, float); // deklaracja jawnej specjalizacji szablonu funkcji, inny zapis to "template <> float function<float>(float, float>;"
+      int main()
+      {
+          ...
+          float a = 5.4, b = 3.9;
+          float c = function(a,b); // użycie jawnej specjalizacji szablonu funkcji w postaci "float function(float, float);"
+          ...
+      }
+      template <> float function(float a, float b) // podanie definicji funkcji wytworzonej w wyniku jawnej specjalizacji szablonu funkcji
+      {
+          return a + b + 1;
+      }
     
-    
-    
-    
-    
-    
+35. Słowo kluczowe "decltype":
+    - umożliwia określenie typu danej zmiennej na podstawie typu zmiennej powstałej w wyniku danego wyrażenia
+    - deklaracja: "decltype(wyrażenie) zmienna;"
+    - przykłady:
+      * "int x; decltype(x) y;" -> 'y' będzie tego samego typu co 'x', czyli będzie zmienną typu 'int'
+      * "decltype(x + y) a;" -> 'a' będzie tego samego typu co wyrażenie 'x + y'
+    - przede wszystkim używane w kontekście szablonów i problemu z określeniem typu danego wyrażenia:
+      Problem:
+        template <typename T1, typename T2>
+        void function(T1 a, T2 b)
+        {
+            ...
+            ?typ? result = a + b; // nie wiadomo jakiego typu będzie zmienna result 
+            ...
+        }
+      Rozwiązanie:
+        template <typename T1, typename T2>
+        void function(T1 a, T2 b)
+        {
+            ...
+            decltype(a + b) result = a + b;
+            ...
+        }
+
+36. Opóźniona deklaracja wartości typu zwracanego z funkcji:
+    - składnia: "auto function(lista parametrów) -> wyrażenie;" -> typ zwracany funkcji 'function()' jest równy typowi 'wyrażenie'
+    - przykład dla typów wbudowanych: "auto function(int a, float b) -> int;" jest równoznaczne z "int function(int a, float b);"
+    - przede wszystkim używane w kontekście szablonów i problemu z określeniem zwracanego typu funkcji szablonowej:
+      Problem:
+      template <typename T1, typename T2>
+      ?typ? function(T1 a, T2 b)
+      {
+          ...
+          return a + b; // nie wiadomo jaki będzie typ wyrażenia 'a + b', więc nie jest znany typ wartości zwracanej
+      }
+      Rozwiązanie:
+      template <typename T1, typename T2>
+      auto function(T1 a, T2 b) -> decltype(a + b)
+      {
+          ...
+          return a + b; // typ wartości zwracanej jest dokładnie równy typowi wyrażenia 'a + b'
+      }
+
+37. 
     
  
 
