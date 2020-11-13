@@ -8,6 +8,7 @@ ancestor-przodek
 approach-zblizac sie, podchodzic (do kogos lub czegos)
 assess-oceniac, poddawac ocenie, oszacowywac
 attorney-prawnik, mecenas
+aware-swiadomy (poinforomowany o czyms)
 back down-ustapic, dac za wygrana
 barely-ledwie, ledwo, prawie wcale
 be atrracted to sb-czuc pociag do kogos
@@ -17,11 +18,15 @@ be on duty-byc na sluzbie/odbywac sluzbe (pracowac)
 be out of line-byc nie do przyjecia, byc nie na miejscu, zachowywac sie nieodpowiednio
 beg-prosic, blagac, zebrac
 bend-schylac, zginac, wyginac (np sie)
+beside oneself (with something)-wyjsc z siebie (ze zlosci), nie posiadac sie (z radosci, smutku, zalu)
+bucket list-lista rzeczy do zrobienia przed smiercia
 cease-przerwac, przestac, zaprzestac, zaniechac
 charm-czar, urok, wdziek (np osobisty)
 charming-czarujacy, uroczy
 childish-dziecinny, dzieciecy
+condemn-potepic, pietnowac
 consider-rozpatrzyc, rozpatrywac, brac pod uwage
+contain-zawierac (miescic w sobie, skladac sie z)
 contribute to sth-przylozyc sie do czegos, przyczyniac sie do czegos, miec w cos wklad
 convince-przekonac, namowic
 convince sb-przekonac kogos
@@ -31,9 +36,11 @@ cozy-przytulny, wygodny, komfortowy
 dare-odwazyc sie, osmielic sie, miec czelnosc
 decaf-kawa bezkofeinowa, bezkofeinowy
 demeaning-ponizajace
+deride-wysmiewac, wyszydzac, drwic
 direct-bezposredni, otwarty (o osobie)
 entirely-calkowicie, zupelnie
 errand boy-chlopiec na posylki
+exile-wygnanie
 feel for sb-wspolczuc komus
 force sb-zmuszac (kogos)
 force sth-wymuszac (cos np zmiane)
@@ -52,14 +59,17 @@ insane-oblakany, szalony, niepoczytalny
 insist-nalegac, domagac sie
 insult (noun)-zniewga, obelga, obraza
 insult (verb)-zniewazac, obrazac
+insurance-ubezpieczenie
 intimate-intymny, prywatny, zazyly, bliski
 intimidate-wzbudzac strach/groze, oniesmielac
 irreversible-nieodwolywalny, nieodwracalny, nieuleczalny
+just shy of sth (eg. it's just shy of treason)-niemal, prawie (np. to jest niemal zdrada stanu)
 let sb down-zawiesc kogos, przyniesc komus zawod
 likewise-nawzajem, mnie rowniez
 loathe-brzydzic sie, czuc wstret
 meantime-tymczasem, w miedzyczasie
 melt-roztapiac, topic sie
+minority-mniejszosc
 mislead-zmylic, wprowadzic w blad
 needle-igla
 notify-powiadomic, zawiadamiac, zglaszac (np na policje)
@@ -82,8 +92,15 @@ stare-wpatrywac sie, gapic sie
 start over-zaczynac na nowo/od nowa
 submit-skladac (np rezygnacje), dostarczac (np dokumenty)
 terminate pregnancy-przerwac ciaze
+testimony-zeznania (swiadka w sadzie), swiadectwo, dowod
 the day after tomorrow-pojutrze
 threat-pogrozka, grozba, zagrozenie
 threaten-grozic, straszyc
+track sb down-wytropic kogos, wysledzic kogos
+track sth down-wytropic cos, odnalezc cos
+treason-zdrada (wobec kraju)
 tribe-szczep, plemie
+undermine-podwazac (np autorytet), podkopywac (np zaufanie do kogos)
 whip-deputowany odpowiedzialny za dyscypline partyjna
+willing-chetny, ochoczy (np chetna osoba)
+withdraw-wycofywac sie (np z organizacji, z brania udzialu w czyms), wycofywac/odwolywac (np slowa, uwagi)

@@ -284,11 +284,28 @@
           return a + b; // typ wartości zwracanej jest dokładnie równy typowi wyrażenia 'a + b'
       }
 
-37. 
+37. Sposobem na uniknięcie błędu kompilacji spowodowanego wielokrotnym włączaniem pliku nagłówkowego do danego pliku jest wykorzystanie dyrektyw preprocesora:
+    #ifndef PLIK_H
+    #define PLIK_H
+    ...
+    #endif 
+    Nie powoduje to jednak uniknięcia wielokrotnego włączenia pliku nagłówkowego do danego pliku. Plik ten jest wielokrotnie dołączany, jednak wszelkie zwielokrotnione deklaracje m.in. funkcji, które
+    spowodowałyby błąd kompilacji, nie zostaną wykonane więcej niż jeden raz, ze względu na fakt, że już po pierwszym dołączeniu zostanie zdefiniowana nazwa znajdująca się w wyrażeniu '#define',
+    więc każde kolejne włączenie tego pliku spowoduje pominiecie instrukcji znajdujacych się miedzy wyrażeniami '#ifndef' i '#endif', a więc m.in. deklaracji funkcji, które spowodowałby błąd
+    kompilacji programu.
     
- 
-
-
+38. Zasięg prototypu funkcji - zasięg widoczności zmiennych w obrębie nawiasów ograniczających prototyp danej funkcji (z tego powodu różnica między nazwą zmiennej w prototypie funkcji, a nazwą tej
+    samej zmiennej w definicji funkcji jest dla kompilatora bez znaczenia).
+    
+39. Pamięć automatyczna (przydział zmiennych automatyczny):
+    - domyślny sposób przydziału pamięci dla zwykłych zmiennych i argumentów funkcji
+    - charakteryzuje się zasięgiem lokalnym (widoczność jedynie w danym bloku i blokach bezpośrednio w nim zawartych) oraz brakiem łączenia
+    - przydział pamięci dla zmiennej automatycznej następuje w momencie wejścia do bloku, ale jej zasięg widoczności dopiero od momentu jej zadeklarowania
+    - czas życia takiej zmiennej obejmuje blok w którym została zadeklarowana (pamięć wykorzystana na przechowywanie takiej zmiennej zostaje automatycznie zwolniona w momencie wyjścia z danego bloku)
+    - jest obsługiwana przez stos (przykład kolejki typu LIFO (last in, first out))
+    - deklaracja zmiennej automatycznej bez jej inicjalizacji, powoduje przypisanie jej nieokreślonej wartości
+    - w przypadku utworzenia w wewnetrznym bloku danego bloku zmiennej automatycznej o tej samej nazwie, co zmienna automatyczna w bloku zewnetrznym, nastepuje przesłonięcie (ukrycie) zmiennej z 
+      bloku zewnetrznego (brak dostępu do zmiennej z bloku zewnetrznego, dostęp jedynie do zmiennej o tej samej nazwie powstałej w bloku wewnętrznym)
 
 
 
