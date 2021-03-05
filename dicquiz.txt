@@ -19,11 +19,17 @@ be out of line-byc nie do przyjecia, byc nie na miejscu, zachowywac sie nieodpow
 beg-prosic, blagac, zebrac
 bend-schylac, zginac, wyginac (np sie)
 beside oneself (with something)-wyjsc z siebie (ze zlosci), nie posiadac sie (z radosci, smutku, zalu)
+bishop-biskup
+blackmail (noun)-szantaz
+blackmail (verb)-szantazowac
+blink-mrugac, mrugnac (np oczami, szybko cos zapalic i zgasic)
 bucket list-lista rzeczy do zrobienia przed smiercia
 cease-przerwac, przestac, zaprzestac, zaniechac
 charm-czar, urok, wdziek (np osobisty)
 charming-czarujacy, uroczy
 childish-dziecinny, dzieciecy
+coffin-trumna
+concern-niepokoj, obawa, troska, problem
 condemn-potepic, pietnowac
 consider-rozpatrzyc, rozpatrywac, brac pod uwage
 contain-zawierac (miescic w sobie, skladac sie z)
@@ -35,16 +41,24 @@ courtroom-sala sadowa, sala rozpraw
 cozy-przytulny, wygodny, komfortowy
 dare-odwazyc sie, osmielic sie, miec czelnosc
 decaf-kawa bezkofeinowa, bezkofeinowy
+decency-przyzwoitosc
 demeaning-ponizajace
+deputy-zastepca (osoby wyzszej ranga)
 deride-wysmiewac, wyszydzac, drwic
+devoted-oddany (np przyjaciel), poswiecajacy sie (o osobie)
 direct-bezposredni, otwarty (o osobie)
+discourage-odwodzic (od czegos), zrazac, zniechecac
 entirely-calkowicie, zupelnie
 errand boy-chlopiec na posylki
+eternal (e.g. eternal life)-wieczny, wiekuisty (np. zycie wieczne)
 exile-wygnanie
+fairness-bezstronnosc, sprawiedliwosc
 feel for sb-wspolczuc komus
+flinch-wzdrygac sie
 force sb-zmuszac (kogos)
 force sth-wymuszac (cos np zmiane)
 gauche-niegrzeczny, nietaktowny
+gentle-delikatny, lagodny, subtelny
 get rid of sb-pozbyc sie kogos, przegonic kogos
 get rid of sth-pozbyc sie czegos
 given name (first name)-imie
@@ -52,12 +66,13 @@ grudge-niechec, uraza
 hang up (on sb)-rozlaczyc sie, odlozyc sluchawke (podczas rozmowy telefonicznej)
 hesitation-niepewnosc, zawahanie, niezdecydowanie
 hopefully-miejmy nadzieje
+hospitality-goscinnosc
 i doubt it-watpie w to
 identities-dane osobowe
 inconclusive-niedecydujacy, nierozstrzygajacy, niejednoznaczny
 insane-oblakany, szalony, niepoczytalny
 insist-nalegac, domagac sie
-insult (noun)-zniewga, obelga, obraza
+insult (noun)-zniewaga, obelga, obraza
 insult (verb)-zniewazac, obrazac
 insurance-ubezpieczenie
 intimate-intymny, prywatny, zazyly, bliski
@@ -67,6 +82,7 @@ just shy of sth (eg. it's just shy of treason)-niemal, prawie (np. to jest niema
 let sb down-zawiesc kogos, przyniesc komus zawod
 likewise-nawzajem, mnie rowniez
 loathe-brzydzic sie, czuc wstret
+mankind-ludzkosc, rodzaj ludzki
 meantime-tymczasem, w miedzyczasie
 melt-roztapiac, topic sie
 minority-mniejszosc
@@ -74,18 +90,30 @@ mislead-zmylic, wprowadzic w blad
 needle-igla
 notify-powiadomic, zawiadamiac, zglaszac (np na policje)
 obedience-posluszenstwo
+obtuse-tepy, ograniczony, glupi, prostacki
 occur to sb-przyjsc komus do glowy
+offended-urazony, obrazony
+on purpose-celowo, umyslnie, specjalnie
 oversee-nadzorowac
 oversight-niedopatrzenie
 overwhelming-przygniatajacy, przytlaczajacy (np uczucie)
 pawn-pionek (figura szachowa/osoba wykorzystywana przez innych)
 plea-usprawiedliwienie, pretekst, wytlumaczenie
 plenty (plenty of sth)-mnostwo, duzo, wiele (mnostwo czegos)
+poll (noun)-ankieta, sondaz, glosowanie
+poll (verb)-przeprowadzac sondaz, ankietowac
 proposal-propozycja, oferta, oswiadczyny
+provide-dostarczac, zaopatrywac, zapewniac
 rape-gwalt, zgwalcic
 reckless-nieostrozny, nierozwazny, lekkomyslny (na zagrozenie, bezpieczenstwo)
 regard-szacunek (do kogos), powazanie
+release-zwolnic, wypuscic (np z wiezienia, ze szpitala)
+request-prosic, żądać
+request (noun)-prosba, wniosek, zyczenie
+resist-opierac sie, sprzeciwiac sie, stawiac opor
+reverse-odwracac, zmieniac (np decyzje)
 ruthless-bezlitosny, bezwzgledny
+sermon-kazanie
 shameless-bezczelny, bezwstydny
 spotlight-centrum uwagi, rozglos
 stare-wpatrywac sie, gapic sie
@@ -94,13 +122,17 @@ submit-skladac (np rezygnacje), dostarczac (np dokumenty)
 terminate pregnancy-przerwac ciaze
 testimony-zeznania (swiadka w sadzie), swiadectwo, dowod
 the day after tomorrow-pojutrze
+thoughtful-troskliwy, myslacy o innych
 threat-pogrozka, grozba, zagrozenie
 threaten-grozic, straszyc
 track sb down-wytropic kogos, wysledzic kogos
 track sth down-wytropic cos, odnalezc cos
 treason-zdrada (wobec kraju)
+treatment-opieka medyczna, leczenie, kuracja
 tribe-szczep, plemie
 undermine-podwazac (np autorytet), podkopywac (np zaufanie do kogos)
+unlikely-malo prawdopodobny, nieprawdopodobny, watpliwy
+unpredictable-nieprzewidywalny, nieobliczalny
 whip-deputowany odpowiedzialny za dyscypline partyjna
 willing-chetny, ochoczy (np chetna osoba)
 withdraw-wycofywac sie (np z organizacji, z brania udzialu w czyms), wycofywac/odwolywac (np slowa, uwagi)

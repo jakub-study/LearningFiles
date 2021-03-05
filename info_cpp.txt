@@ -14,8 +14,8 @@
 6. Podczas wykonywania danego wyrazenia kompilator automatycznie dokonuje konwersji wszelkich typow calkowitoliczbowych na typ int (jesli tylko typ int jest w stanie calkowicie pomiescic wartosci
    danego typu) np. majac trzy zmienne typu short: one, two, three oraz instrukcje "three = one + two;" kompilator najpierw dokonuje konwersji zmiennych one oraz two na typ int, wykonuje obliczenia
    na tym typie, a na koncu konwertuje wynik z powrotem na typ short. Podczas operacji na danych typu calkowitoliczbowego >= od typu int nastepuje automatyczna konwersja na typ o porzadku wyzszym, by
-   nie dopuscic do utraty danych. Identycznie jest w przypadku operacji na liczbach zmiennoprzecinkowych, gdzie typ o porzadku nizszym konwertowany jest na typ o porzadku wyzszym. W przypadku operacji
-   na danych roznych typow, zawsze dokonuje sie konwersja liczb na typ zmiennoprzecinkowy (o ile ten jest w stanie pomiescic wszystkie wartosci typu calkowitoliczbowego).
+   nie dopuscic do utraty danych. Identycznie jest w przypadku operacji na liczbach zmiennoprzecinkowych, gdzie typ o porzadku nizszym konwertowany jest na typ o porzadku wyzszym. W przypadku
+   operacji na danych roznych typow, zawsze dokonuje sie konwersja liczb na typ zmiennoprzecinkowy (o ile ten jest w stanie pomiescic wszystkie wartosci typu calkowitoliczbowego).
    
 7. Za pomoca inicjalizacji klamrowej mozna zainicjalizowac zerem wszystkie elementy tablicy np. "int tab[3] {};" lub "float tab[45] = {};".
 
@@ -31,8 +31,8 @@
     - wartosci: czerwony = 0, pomaranczowy = 1, zolty = 51, rozowy = 52
     - deklaracja zmiennej: "spectrum pasmo = niebieski;"
     - mozliwosc konwersji typu wyliczeniowego na typ calkowity int:
-      * "int kolor = zielony;" -> wtedy kolor = 3
-      * "int kolor = 3 + czerwony;" -> wtedy kolor = 3 + 1 = 4
+      * "int kolor = zielony;" -> wtedy kolor = 2
+      * "int kolor = 3 + pomaranczowy;" -> wtedy kolor = 3 + 1 = 4
     - brak mozliwosci konwersji typu calkowitego na wyliczeniowy bez jawnego rzutowania typu:
       * "spectrum pasmo = 3;" -> zle
       * "spectrum pasmo = 3 + czerwony;" -> zle (czerwony konwertowany na int)
@@ -52,7 +52,7 @@
     - odnoszenie sie do poszczegolnych elementow tablicy: tab[1] = *(tab+1), tab[3] = *(tab+3)
     - deklaracja wskaznika na tablice: "int * wsk = tab;":
       * wsk[0] = tab[0], wsk[1] = tab[1] ...
-      * "wsk = wsk + 2;" -> dobrze -> zwiekszenie wskaznika o wielkosc rowna dwukrotnej wielkosci jednego elementu tablicy (dla typu int zazwyczaj 2 razy 4 bajty = 8 bajtow) -> wsk[0] = tab[2] = 2 ...
+      * "wsk = wsk + 2;" -> dobrze -> zwiekszenie wskaznika o wielkosc rowna dwukrotnej wielkosci jednego elementu tablicy (dla typu int zazwyczaj 2 razy 4 bajty = 8 bajtow) -> wsk[0] = tab[2]
       * "tab = tab + 1;" ->  zle -> nazwa tablicy jest stala
 
 13. Klasa szablonowa std::vector - odpowiednik szablonowy dla tablicy stworzonej przez uzytkownika i przydzielanej w sposob dynamiczny (sterta), czyli w czasie wykonywania programu (w zwiazku z tym
@@ -75,15 +75,15 @@
 17. Pętla opóźnienia - str. 218
 
 18. Aliasy typów "typedef":
-    - deklaracja: "typedef NazwaTypu NazwaAliasu" np. "typedef long double ld;", "typedef int * wsk_na_int;"
+    - deklaracja: "typedef NazwaTypu NazwaAliasu;" np. "typedef long double ld;", "typedef int * wsk_na_int;"
     - użycie: "wsk_na_int one, two;" -> tworzy dwie zmienne typu int*
     - tworzenie aliasu typu za pomoca slowka kluczowego typedef nie tworzy nowego typu, a jedynie nowa nazwe dla typu istniejacego, wiec np. wyrazenie 'ld' bedzie traktowane przez kompilator
       jako zwykle wystapienie slowka long double
       
 19. Pętla zakresowa:
     - deklaracja prostej wbudowanej tablicy: "int tab[5] = {1, 2, 3, 4, 5};"
-    - stworzenie pętli zakresowej sluzacej do odczytu danych z tablicy: "for(int x: tab) {std::cout << x << std::endl;} -> 'x' reprezentuje kolejne elementy tablicy, wiec na poczatku x = tab[0],
-      pozniej x = tab[1] itd, w tym przypadku nie mozna zmieniac w zaden sposob elemntow tablicy
+    - stworzenie pętli zakresowej sluzacej do odczytu danych z tablicy: "for(int x: tab) {std::cout << x << std::endl;} -> 'x' reprezentuje kolejne elementy tablicy tworząc ich kopie, wiec na
+      poczatku x = tab[0], pozniej x = tab[1] itd, w tym przypadku nie mozna zmieniac w zaden sposob elemntow tablicy
     - stworzenie pętli zakresowej sluzacej do modyfikacji danych z tablicy: "for(int &x: tab) {x += 10;} -> poszczegolne wartosci tablicy zwiekszane o 10
     
 20. Punkt odniesienia - operator, dla ktorego kazda wartosc wyrazenia po jego lewej stronie jest interpretowana przed przejsciem do wyrazenia po jego prawej strony. Do punktow odniesienia zaliczamy:
@@ -97,7 +97,7 @@
 21. Standard języka gwarantuje, że wyrażenia logiczne będą interpretowane od lewej strony do prawej strony i że ich interpretacja zostanie przerwana gdy znany będzie już wynik całego wyrażenia
     logicznego np. "x != 0 && 100 / x > 1" -> w przypadku gdy 'x = 0' wyrazenie '100 / x > 1' nie zostanie wykonane, gdyz niezaleznie od jego wyniku wartosc calego wyrazenia logicznego wynosi false
     
-22. Operator wyboru '?:':
+22. Operator wyboru (warunkowy) '?:':
     - postać: "wyrazenie1 ? wyrazenie2 : wyrazenie3"
     - jesli 'wyrazenie1 = true' -> wykonywanie 'wyrazenie2', jesli 'wyrazenie1 = false' -> wykonywanie 'wyrazenie3'
     - przyklad: "int a = 9, b = 11; int c = a < b ? a : b;" -> nastapi inicjalizacja zmiennej 'c' wartosci zmiennej 'a = 9'
@@ -114,7 +114,7 @@
     
 26. Nazewnictwo w funkcjach:
     - parametr (inaczej parametr formalny) - zmienna używana do odbioru przekazanej wartosci w funkcji
-    - argument (inaczej parametr faktyczny) - zmienna używana do przekazania wartosci do funkcji
+    - argument (inaczej parametr faktyczny) - wartosc przekazana do funkcji 
 
 27. Przekazywanie tablic jednowymiarowych do funkcji: "void funkcja(int tab[]);" = "void funkcja(int * tab);" -> gdzie tab to wskaznik na pierwszy element przekazywanej tablicy
 
